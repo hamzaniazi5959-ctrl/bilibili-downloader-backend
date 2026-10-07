@@ -1,0 +1,12 @@
+# Fallback: Render.com free tier (auto-detected on repo connect)
+services:
+  - type: web
+    name: bilibili-downloader
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 10000
